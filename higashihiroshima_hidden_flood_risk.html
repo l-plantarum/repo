@@ -709,7 +709,7 @@ input[type=range]{width:100%}
   <h1>東広島市 隠れた水害リスク図</h1>
   <p class="sub">地理院DEM5A（5mメッシュ）から抽出した閉塞凹地と谷底／解析格子7.88m<br>
      国土数値情報 W05・N03 併載／2026年9月</p>
-  <div style="display:flex;gap:7px;margin:0 0 16px"><button id="bCase" style="flex:1;padding:8px 4px;font:inherit;font-size:12.5px;font-weight:600;border:1px solid var(--warn);background:#fff8f2;color:var(--warn);border-radius:6px;cursor:pointer">寺家地区へ</button><button id="bAll" style="flex:1;padding:8px 4px;font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:6px;cursor:pointer">市全域に戻す</button></div>
+
   <div class="kpi">
     <div><b>1,145<span style="font-size:12px"> ha</span></b><span>閉塞凹地（湛水深0.2m以上）市域の1.8%</span></div>
     <div><b>3,447<span style="font-size:12px"> ha</span></b><span>谷底（HAND 0.5m以下）市域の5.4%</span></div>
@@ -745,8 +745,7 @@ input[type=range]{width:100%}
 
   <h2>東広島市の雨水出水浸水想定区域図</h2>
   <div class="case">
-    <p style="margin:0 0 7px;font-size:12.5px">市は<b>令和8年3月23日に雨水出水浸水想定区域を指定・公表</b>されています（水防法第14条の2第2項・第4項）。ただし公表されている図は<b>西条排水区の1枚</b>で、想定降雨は時間雨量130mmです。<br><br>この図はそれを置き換えるものではありません。雨水出水浸水想定区域図は下水道等の排水施設を前提に解析するため、<b>雨水管が入っていない区域は、そもそも解析の対象になりません</b>。この図が示すのは、その<b>外側</b>で水が集まる地形です。雨水管の敷設範囲は市の下水道台帳図（雨水管渠）でご確認いただけます。<br><br><b>市内の冠水箇所について。</b>市にお問い合わせしたところ、<b>令和3(2021)年8月</b>に<b>寺家地区で数か所</b>と<b>ゆめタウン東広島付近</b>で冠水があったと伺いました。また寺家排水区は雨水管が未整備と伺っています。<b>いずれも私が確認した事実ではなく、市からお教えいただいた情報です。</b></p>
-    <p style="margin:0;font-size:12.3px;color:#5b6b7a"><b>照合をお願いできないでしょうか。</b>お教えいただいた令和3年8月の冠水箇所と、この図を重ねて、合っているか外れているかを見ていただきたいのです。貴市が公表されている「平成30年7月豪雨に伴う浸水実績箇所図」（建設部 災害河港課・自治協議会ごとに48地区）もあわせてご覧いただければ、なお助かります。<br><br>しきい値は他地域で先に決めた値をそのまま使っており、<b>東広島市の浸水実績に合わせた調整は一切していません</b>。いただいた結果でしきい値を変えることもいたしません。外れていれば外れていたと記録します。<br><br>参考：市域全体では凹地・谷底のいずれかが<b>6.2%</b>ですが、寺家駅の半径500mでは<b>14.2%</b>、西条町寺家の代表点の半径1kmでは<b>20.4%</b>と、市平均の2〜3倍の密度で出ています。<b>ただしこれは答え合わせではありません。</b>冠水した地点と図を重ねたわけではなく、「この地区で図が濃い」と言っているだけです。ゆめタウン東広島付近については、店舗の正確な位置を把握していないため数値を出していません。重ねる作業は、地点をご存じの貴市でなければできません。</p>
+    <p style="margin:0 0 7px;font-size:12.5px">市は<b>令和8年3月23日に雨水出水浸水想定区域を指定・公表</b>されています（水防法第14条の2第2項・第4項）。ただし公表されている図は<b>西条排水区の1枚</b>で、想定降雨は時間雨量130mmです。<br><br>この図はそれを置き換えるものではありません。雨水出水浸水想定区域図は下水道等の排水施設を前提に解析するため、<b>雨水管が入っていない区域は、そもそも解析の対象になりません</b>。この図が示すのは、その<b>外側</b>で水が集まる地形です。</p>
   </div>
 
   <h2>データと注意点</h2>
@@ -760,9 +759,7 @@ input[type=range]{width:100%}
   </p>
   <p class="note">
     <b>しきい値の出どころ。</b>湛水深0.2m・HAND 0.5m・集水面積50haの3つは、
-    千葉県外の別地域で先行して行った解析で定めた値をそのまま引き継いだもので、
-    <b>千葉県内の被災箇所に合わせた調整は一切していません</b>。
-    今回の水害の実績と突き合わせる前に値を固定しています（事前登録）。
+    他地域で先行して行った解析で定めた値をそのまま引き継いだもので、<b>東広島市の浸水実績に合わせた調整は一切していません</b>。実績と突き合わせる前に値を固定しています（事前登録）。
     しきい値を面積の実寸（ha）で持つのは、DEMの解像度が変わっても同じ地形を指すようにするためです
     （画素数で持つと、0.5mDEMでは50haが0.125haになってしまいます）。
   </p>
@@ -826,7 +823,7 @@ bind('cSink',sink); bind('cHand',hand); bind('cChan',chan); bind('cRiv',riv);
 document.getElementById('op').oninput=function(){
   var v=this.value/100; sink.setOpacity(v); hand.setOpacity(v); chan.setOpacity(Math.min(1,v+.1));};
 map.fitBounds([[34.276986793, 132.600443061], [34.624073333, 132.92087083]]);
-document.getElementById('bCase').onclick=function(){map.setView([34.437,132.7258],15);};document.getElementById('bAll').onclick=function(){map.fitBounds(bnd);};
+
 
 
 </script>
